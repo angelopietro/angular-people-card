@@ -1,0 +1,170 @@
+a:hover {
+  text-decoration: none;
+}
+/* PEOPLE -------------------------------------------------------------- */
+
+.people {
+  text-align: center;
+  padding: 6rem 0;
+  width: 100%;
+  max-width: 1220px;
+  margin: auto;
+}
+
+.people h2 {
+  color: #555;
+  font-weight: 300;
+  font-size: 4rem;
+}
+
+.people h3 {
+  color: #777;
+  font-weight: 400;
+}
+
+.people-list {
+  margin: 8.5rem -1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.people-wrapper {
+  width: 25%;
+  padding: 0 1rem;
+  margin-bottom: 5rem;
+}
+
+.people-item {
+  display: block;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.people-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.people-item h4 {
+  display: flex;
+  align-items: center;
+  color: #555;
+  padding: 1.5rem 1.5rem 0.8rem;
+}
+
+.people-item h4 img {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  margin-top: -40px;
+  margin-right: 10px;
+}
+
+.people-item p {
+  text-align: left;
+  color: #888;
+  padding: 0 1.5rem;
+}
+
+.people-info {
+  border-top: 1px solid #ddd;
+  margin-top: 1.5rem;
+  display: flex;
+}
+
+.people-info div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.people-info div + div {
+  border-left: 1px solid #ddd;
+}
+
+.people-info div span {
+  color: #666;
+  font-size: 1.5rem;
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 920px) {
+  .people-wrapper {
+    width: 50%;
+  }
+
+  .people {
+    padding: 4rem 0;
+  }
+
+  .people h2 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .people-list {
+    margin-top: 3rem;
+  }
+
+  .people-wrapper {
+    width: 100%;
+  }
+}
+
+.cd-pagination /deep/ {
+  width: 90%;
+  max-width: 768px;
+  margin: 2em auto 4em;
+  text-align: center;
+}
+
+.cd-pagination /deep/ li.button {
+  display: inline-block;
+}
+.cd-pagination /deep/ a,
+.cd-pagination /deep/ span {
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  padding: 0.6em 0.8em;
+  font-size: 1.6rem;
+}
+.cd-pagination /deep/ a {
+  border: 1px solid #e6e6e6;
+  border-radius: 0.25em;
+}
+.no-touch .cd-pagination /deep/ a:hover {
+  background-color: #f2f2f2;
+}
+.cd-pagination /deep/ a:active {
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.cd-pagination /deep/ a.disabled {
+  color: rgba(46, 64, 87, 0.4);
+  pointer-events: none;
+}
+.cd-pagination /deep/ a.disabled::before,
+.cd-pagination a.disabled::after {
+  opacity: 0.4;
+}
+
+.cd-pagination /deep/ .current {
+  background-color: #3040a8;
+  border-color: #3040a8;
+  color: #ffffff;
+  pointer-events: none;
+}

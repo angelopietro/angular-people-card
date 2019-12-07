@@ -1,0 +1,56 @@
+<section class="people">
+  <div class="center">
+    <h2>MDC People Directory Card</h2>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+
+    <div class="people-list">
+      <div
+        *ngFor="
+          let person of people | paginate: { itemsPerPage: 12, currentPage: p }
+        "
+        class="people-wrapper"
+      >
+        <a href="#" class="people-item">
+          <h4>
+            <img src="{{ person.photo }}" alt="" /> {{ person.name }}
+            {{ person.surname }}
+          </h4>
+          <p>
+            {{ person.title }}. {{ person.name }} have {{ person.age }} years
+            old and and lives at
+            {{ person.region }}
+          </p>
+          <div class="people-info">
+            <div tooltip="{{ person.region }}" placement="top" show-delay="100">
+              <fa-icon [icon]="faMapMarked"></fa-icon>
+            </div>
+            <div tooltip="{{ person.email }}" placement="top" show-delay="100">
+              <fa-icon [icon]="faEnvelope"></fa-icon>
+            </div>
+            <div *ngIf="person.gender === 'male'">
+              <fa-icon
+                [icon]="faMars"
+                tooltip="{{ person.gender }}"
+                placement="top"
+                show-delay="100"
+              ></fa-icon>
+            </div>
+            <div *ngIf="person.gender === 'female'">
+              <fa-icon
+                [icon]="faVenus"
+                tooltip="{{ person.gender }}"
+                placement="top"
+                show-delay="100"
+              ></fa-icon>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <pagination-controls
+    (pageChange)="p = $event"
+    class="cd-pagination"
+  ></pagination-controls>
+</section>

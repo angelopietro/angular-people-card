@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+html {
+  font-size: 62.5%;
+  background: #eee;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 54%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+
+.center {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+/* BANNER ------------------------------------------------------------------- */
+
+.banner {
+  width: 100%;
+  height: 650px;
+  background-image: url("../assets/images/bg.jpg");
+  background-size: cover;
+}
+
+.banner .center {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner img {
+  height: 300px;
+  flex-shrink: 0;
+}
+
+.banner-text {
+  color: #fff;
+  margin-right: 8rem;
+  max-width: 500px;
+}
+
+.banner-text h1 {
+  font-weight: 700;
+  font-size: 5.4rem;
+  line-height: 1.1;
+}
+
+.banner-text p {
+  font-size: 1.7rem;
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 1180px) {
+  .banner {
+    height: 450px;
+  }
+
+  .banner img {
+    height: 180px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .banner {
+    height: auto;
+    padding: 4rem 0;
+    background-image: url("../assets/images/bg_home.jpg");
+    background-size: cover;
+  }
+
+  .banner .center {
+    flex-direction: column;
+  }
+
+  .banner-text {
+    margin-right: 0;
+  }
+
+  .banner-text h1 {
+    font-size: 3rem;
+  }
+
+  .banner img {
+    order: -1;
+    margin-bottom: 3rem;
+  }
+}
+
+/* FOOTER ------------------------------------------------------------------- */
+
+footer {
+  background: #101010;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+footer p {
+  opacity: 0.55;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #fff;
+}
